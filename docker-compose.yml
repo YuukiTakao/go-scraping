@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go_scraping_app
+    ports:
+      - "80:80"
+    volumes:
+      - .:/go/src/app
+    tty: true
